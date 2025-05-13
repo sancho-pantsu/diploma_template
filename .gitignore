@@ -256,6 +256,8 @@ TSWLatexianTemp*
 # gummi
 .*.swp
 
+.idea
+
 # KBibTeX
 *~[0-9]*
 
@@ -280,3 +282,4 @@ TSWLatexianTemp*
 
 # pdf output
 /*.pdf
+**/*_primer.*
