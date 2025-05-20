@@ -77,3 +77,38 @@ times % use Times font as main
 \counterwithin{figure}{subsection}
 
 \newcommand{\normal}{\fontsize{14pt}{21pt}\selectfont}
+
+\usepackage{etoolbox}
+
+% Нумерация с 1
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+
+% Кастомные заголовки
+\newcommand{\customsection}[1]{%
+  \stepcounter{section}%
+  \setcounter{subsection}{0}%
+  \setcounter{subsubsection}{0}%
+  \addcontentsline{toc}{section}{\thesection\quad#1}%
+  {\setstretch{1.5}%
+   \noindent\hspace{1.25cm}\textbf{\fontsize{16pt}{21pt}\selectfont \thesection\quad#1}%
+   \par}%
+}
+
+\newcommand{\customsubsection}[1]{%
+  \stepcounter{subsection}%
+  \setcounter{subsubsection}{0}%
+  \addcontentsline{toc}{subsection}{\thesubsection\quad#1}%
+  {\setstretch{1.5}%
+   \noindent\hspace{1.25cm}\textbf{\fontsize{14pt}{19pt}\selectfont \thesubsection\quad#1}%
+   \par}%
+}
+
+\newcommand{\customsubsubsection}[1]{%
+  \stepcounter{subsubsection}%
+  \addcontentsline{toc}{subsubsection}{\thesubsubsection\quad#1}%
+  {\setstretch{1.5}%
+   \noindent\hspace{1.25cm}\textbf{\fontsize{14pt}{19pt}\selectfont \thesubsubsection\quad#1}%
+   \par}%
+}
