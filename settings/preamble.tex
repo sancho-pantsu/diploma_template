@@ -1,5 +1,5 @@
 \documentclass[
-candidate, % document type
+bachelor, % document type
 subf, % use and configure subfig package for nested figure numbering
 times % use Times font as main
 ]{disser}
@@ -18,11 +18,6 @@ times % use Times font as main
 \usepackage{array} % расширенные возможности для работы с таблицами
 \usepackage{tabularx} % автоматический подбор ширины столбцов
 \usepackage{dcolumn} % выравнивание чисел по разделителю
-
-% Математика
-\usepackage{bm} % полужирное начертание для математических символов
-\usepackage{amsmath} % дополнительные математические возможности
-\usepackage{amssymb} % дополнительные математические символы
 
 % Библиография и ссылки
 \usepackage{cite} % поддержка цитирования
@@ -66,3 +61,19 @@ times % use Times font as main
 % Установка стилей страницы и главы
 \pagestyle{footcenter}
 \chapterpagestyle{footcenter}
+
+\usepackage{ragged2e}
+\usepackage{csquotes} % опционально, для лучшей типографики
+\usepackage{microtype} % улучшает переносы и выравнивание
+\usepackage{enumitem}
+\usepackage{float}
+
+\setlist{itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt}
+\setstretch{1.5}
+\setcounter{secnumdepth}{3}
+\sloppy
+\justifying
+\usepackage{chngcntr}
+\counterwithin{figure}{subsection}
+
+\newcommand{\normal}{\fontsize{14pt}{21pt}\selectfont}
